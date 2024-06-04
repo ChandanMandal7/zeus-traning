@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Mosh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+/* 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+
+        .card {
+            width: 457px;
+            height: 138px;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 4px;
+            box-sizing: border-box;
+            display: flex;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .card img {
+            width: 130px;
+            height: 130px;
+            box-sizing: border-box;
+        }
+
+        #name {
+            font-size: 20px;
+            color: #000000;
+            font-family: "Roboto", sans-serif;
+            font-style: Medium;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        #content {
+            font-size: 20px;
+            color: #000000;
+            font-family: "Roboto", sans-serif;
+
+            font-style: normal;
+            padding-bottom: 14px;
+
+        }
+
+        .right {
+            margin-left: 14px;
+        }
+
+        .likesharecoment {
+            display: flex;
+            margin-left: 14px;
+
+        }
+ /* image is treated as like */
+        .likesharecoment .like {
+            height: 20px;
+            width: 20px;
+            margin-right: 14px;
+
+        }
+
+        .likesharecoment .likesection {
+            display: flex;
+            margin-right: 24px;
+        }
+/* number realed to likes and share */
+        #numberoflike {
+            font-size: 15px;
+            color: #858991;
+            font-family: "Roboto", sans-serif;
+
+            font-style: medium;
+            padding-bottom: 14px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div>
+
+            <img src="images/MicrosoftTeams-image.png">
+        </div>
+        <div class="right">
+
+            <h4 id="name">@moshhamedani</h4>
+            <p id="content">i'd love to teach you HTML/CSS!</p>
+
+            
+
+            <div class="likesharecoment">
+
+                <div class="likesection">
+                    <img src="images/speech-bubble.png" class="like">
+                    <p id="numberoflike">242</p>
+                </div>
+
+                <div class="likesection">
+                    <img src="images/exchange.png" class="like">
+                    <p id="numberoflike">142</p>
+                </div>
+
+                <div class="likesection">
+                    <img src="images/heart.png" class="like">
+                    <p id="numberoflike">2.6k</p>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

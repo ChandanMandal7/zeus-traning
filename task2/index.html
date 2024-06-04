@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FFFFCC;
+        }
+
+        .header {
+            background-color: red;
+            padding-bottom: 2px;
+            text-align: center;
+            letter-spacing: 7px;
+            color: #FFFFCC;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+
+        h1 {
+            background-color: #A51F19;
+        }
+
+        h2 {
+            background-color: #009900;
+            color: white;
+        }
+
+        ul {
+            color: #A51F19;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>My First web page</h1>
+    </div>
+
+    <h2> what is this</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veritatis iusto accusantium natus
+        ratione<strong>hi lets understand html</strong></p>
+    <h2> why is this</h2>
+
+    <ul>
+        <li>To learn HTML</li>
+        <li>List element</li>
+        <ol>
+            <li>Home</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ol>
+        <li>here i have created ordered and unordered list</li>
+
+    </ul>
+    <h2> ZeusLearning.com</h2>
+    <a href="https://www.google.com" target="_blank">
+        This link will open ZeusLearning.com in new tab
+    </a>
+    <h2>On clicking of Following image navigate to Google.com</h2>
+
+
+
+    <a href="https://www.google.com" target="_blank">
+        <img src="images/google.png">
+    </a>
+
+    <h3 style="color: grey;">Some random table</h3>
+    <table style="background-color: grey;">
+        <tr>
+            <td>r1,c1</td>
+            <td>r1,c2</td>
+            <td>r1,c3</td>
+        </tr>
+        <tr>
+            <td>r2,c1</td>
+            <td>r2,c2</td>
+            <td>r2,c3</td>
+        </tr>
+        <tr>
+            <td>r3,c1</td>
+            <td>r3,c2</td>
+            <td>r13,c3</td>
+        </tr>
+
+    </table>
+
+
+    <h3 style="color: grey;">Some random form</h3>
+
+
+    <p><Strong>Note:</Strong> It loks the part ,but wont do anything</p>
+
+
+
+    <form id="myForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="your name" required><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" placeholder="Your comment" required></textarea><br><br>
+
+        <label>Are you:</label><br>
+        <input type="radio" name="gender" value="male" required> Male<br>
+        <input type="radio" name="gender" value="female" required> Female<br><br>
+
+        <button type="button" onclick="validateForm()">Submit Query</button>
+    </form>
+
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var comments = document.getElementById("comments").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            //check for all the base conditions
+            if (name === "" || comments === "" || gender === null || comments === null || name === null) {
+                alert("All fields are compulsory");
+
+                if (name === "") {
+                    document.getElementById("name").focus();
+                } else if (comments === "") {
+                    document.getElementById("comments").focus();
+                } else {
+                    // Focus on the first radio button
+                    document.querySelector('input[name="gender"]').focus();
+                }
+            } else {
+                // Form is valid, you can submit it
+                document.getElementById("myForm").submit();
+                alert("we have recived your query, will get back to you soon!");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
